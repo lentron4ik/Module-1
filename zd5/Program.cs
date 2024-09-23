@@ -11,7 +11,7 @@ namespace zd5
         // Метод для проверки, является ли число простым
         static bool IsPrime(int number)
         {
-            // Отрицательные числа, 0 и 1 не являются простыми числами
+            // Все отрицательные числа, 0 и 1 не являются простыми числами
             if (number <= 1)
                 return false;
 
@@ -27,24 +27,17 @@ namespace zd5
 
         static void Main(string[] args)
         {
-            try
-            {
-                Console.WriteLine("Введите целое число для проверки:");
-                int number = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите целое число для проверки:");
+            int number = int.Parse(Console.ReadLine());
 
-                // Проверка является ли число простым
-                if (IsPrime(number))
-                {
-                    Console.WriteLine($"Число {number} является простым.");
-                }
-                else
-                {
-                    Console.WriteLine($"Число {number} не является простым.");
-                }
-            }
-            catch (FormatException)
+            // Проверка является ли число простым
+            if (IsPrime(number))
             {
-                Console.WriteLine("Ошибка: введите корректное целое число.");
+                Console.WriteLine($"Число {number} является простым.");
+            }
+            else
+            {
+                Console.WriteLine($"Число {number} не является простым.");
             }
         }
     }
