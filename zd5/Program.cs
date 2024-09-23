@@ -39,7 +39,7 @@ namespace zd5
             {
                 Console.WriteLine($"Число {number} не является простым.");
             }
+            Console.ReadKey();
         }
     }
 }
-
